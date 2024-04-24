@@ -45,28 +45,23 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func btnLoginAction(_ sender: UIButton) {
-        
-        guard let email = txtEmail.text, let password = txtPassword.text,!email.isEmpty,!password.isEmpty else {
-            showAlert(title: "Validation Error", message: "Please Enter Email and Password")
-            return
-        }
             
-        if isValidEmailAndPassword(email: email,password: password) {
+        if isValidEmailAndPassword(email: txtEmail.text ?? "",password: txtPassword.text ?? "") {
             
             if(btnRememberMe.isSelected){
                 UserDefaults.standard.setValue(txtEmail.text,forKey: "Email")
                 UserDefaults.standard.setValue(txtPassword.text, forKey: "Password")
+                UserDefaults.standard.setValue(true, forKey: "RememberMe")
             }
             else{
                 UserDefaults.standard.removeObject(forKey: "Email")
                 UserDefaults.standard.removeObject(forKey: "Password")
+                UserDefaults.standard.removeObject(forKey: "RememberMe")
             }
             
-            let sb = UIStoryboard.init(name: "NextStoryboard", bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier : "NextVC") as! NextVC
+            let sb = UIStoryboard.init(name: "SideMenuDemo", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier : "SideMenuDemoVC") as! SideMenuDemoVC
             navigationController?.pushViewController(vc, animated: true)
-        } else {
-            showAlert(title: "Validation Error", message: "Invalid Email and Password Format!")
         }
     }
             
@@ -82,11 +77,27 @@ class LoginVC: UIViewController {
         let passwordRegex = "^.{8,}$"
         let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
         
-        if (emailPredicate.evaluate(with: email) && passwordPredicate.evaluate(with: password)) {
-            return true
-        }else{
+        if email.isEmpty {
+            showAlert(title: "Validation Error", message: "Please Enter Email")
             return false
         }
+        
+        if !emailPredicate.evaluate(with: email) {
+            showAlert(title: "Validation Error", message: "Please Enter valid Email")
+            return false
+        }
+        
+        if password.isEmpty{
+            showAlert(title: "Validation Error", message: "Please Enter Password")
+            return false
+        }
+        
+        
+        if !passwordPredicate.evaluate(with: password) {
+            showAlert(title: "Validation Error", message: "Please Enter valid Password")
+            return false
+        }
+        return true
     }
     
     //show alert function

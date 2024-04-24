@@ -56,6 +56,7 @@ extension SideMenuDataSourceDelegate :UITableViewDataSource {
         let aMenuOptionData = arr[indexPath.row]
         let aMenuItemCell = tableView.dequeueReusableCell(withIdentifier: "SideMenuItemTVC", for: indexPath) as! SideMenuItemTVC
         aMenuItemCell.configCell(data: aMenuOptionData)
+        print(arr.count," ",indexPath.row)
         if arr.count-1 == indexPath.row {
             aMenuItemCell.seperatorVW.isHidden = true
         }

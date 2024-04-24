@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Change ColorVC-->
+        <!--Color ChangeVC-->
         <scene sceneID="s4p-Rt-BPV">
             <objects>
-                <viewController storyboardIdentifier="ChangeColorVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fcP-C1-tOC" customClass="ChangeColorVC" customModule="CombinedProjects" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ColorChangeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fcP-C1-tOC" customClass="ColorChangeVC" customModule="CombinedProjects" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XNR-qk-N75">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

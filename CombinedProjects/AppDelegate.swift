@@ -10,9 +10,9 @@ import SideMenu
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         setUpInitialVC()
@@ -22,8 +22,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setUpInitialVC(){
-        let story = UIStoryboard(name: "SideMenuDemo", bundle: nil)
-        let vc = story.instantiateViewController(withIdentifier: "SideMenuDemoVC")as! SideMenuDemoVC
+        var story:UIStoryboard!
+        var vc:UIViewController!
+        if UserDefaults.standard.bool(forKey: "RememberMe"){
+            story = UIStoryboard(name: "SideMenuDemo", bundle: nil)
+            vc = story.instantiateViewController(withIdentifier: "SideMenuDemoVC")as! SideMenuDemoVC
+        }
+        else{
+            story = UIStoryboard(name: "Login", bundle: nil)
+            vc = story.instantiateViewController(withIdentifier: "LoginVC")as! LoginVC
+        }
+        
         let navcon = UINavigationController(rootViewController: vc)
         navcon.navigationBar.isHidden = true
         window?.rootViewController = navcon
@@ -48,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let  SCREEN_WIDTH = UIScreen.main.bounds.size.width
         sideMenuViewController.menuWidth = SCREEN_WIDTH * 0.8
     }
-
-
+    
+    
 }
 

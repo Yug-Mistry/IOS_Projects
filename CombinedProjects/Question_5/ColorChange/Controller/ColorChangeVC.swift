@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChangeColorVC: UIViewController {
+class ColorChangeVC: UIViewController {
 
     // MARK: - Outlets
     

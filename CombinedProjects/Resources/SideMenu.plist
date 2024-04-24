@@ -64,13 +64,113 @@
 	</dict>
 	<dict>
 		<key>TitleKey</key>
-		<string>Dashboard</string>
+		<string>Stack</string>
 		<key>storyboardID</key>
-		<string>SideMenu</string>
+		<string>Stack</string>
 		<key>viewControllerName</key>
-		<string>SideMenuVC</string>
+		<string>StackVC</string>
 		<key>Image</key>
-		<string>Logo</string>
+		<string>num_6</string>
+	</dict>
+	<dict>
+		<key>TitleKey</key>
+		<string>Multiplier Stack</string>
+		<key>storyboardID</key>
+		<string>MultiStack</string>
+		<key>viewControllerName</key>
+		<string>MultiStackVC</string>
+		<key>Image</key>
+		<string>num_7</string>
+	</dict>
+	<dict>
+		<key>TitleKey</key>
+		<string>Login Small</string>
+		<key>storyboardID</key>
+		<string>LoginSmall</string>
+		<key>viewControllerName</key>
+		<string>LoginSmallVC</string>
+		<key>Image</key>
+		<string>num_8</string>
+	</dict>
+	<dict>
+		<key>TitleKey</key>
+		<string>Silvertouch Login</string>
+		<key>storyboardID</key>
+		<string>Login</string>
+		<key>viewControllerName</key>
+		<string>LoginVC</string>
+		<key>Image</key>
+		<string>num_9</string>
+	</dict>
+	<dict>
+		<key>TitleKey</key>
+		<string>News Login</string>
+		<key>storyboardID</key>
+		<string>NewsLogin</string>
+		<key>viewControllerName</key>
+		<string>NewsLoginVC</string>
+		<key>Image</key>
+		<string>num_10</string>
+	</dict>
+	<dict>
+		<key>TitleKey</key>
+		<string>Country Table View</string>
+		<key>storyboardID</key>
+		<string>Country</string>
+		<key>viewControllerName</key>
+		<string>CountryVC</string>
+		<key>Image</key>
+		<string>num_11</string>
+	</dict>
+	<dict>
+		<key>TitleKey</key>
+		<string>Tableview2</string>
+		<key>storyboardID</key>
+		<string>TableView2</string>
+		<key>viewControllerName</key>
+		<string>TableView2VC</string>
+		<key>Image</key>
+		<string>num_12</string>
+	</dict>
+	<dict>
+		<key>TitleKey</key>
+		<string>Json TableView</string>
+		<key>storyboardID</key>
+		<string>JsonTV</string>
+		<key>viewControllerName</key>
+		<string>JsonVC</string>
+		<key>Image</key>
+		<string>num_13</string>
+	</dict>
+	<dict>
+		<key>TitleKey</key>
+		<string>Json Section Table View</string>
+		<key>storyboardID</key>
+		<string>JsonSectionTV</string>
+		<key>viewControllerName</key>
+		<string>JsonSectionVC</string>
+		<key>Image</key>
+		<string>num_14</string>
+	</dict>
+	<dict>
+		<key>TitleKey</key>
+		<string>Collection Example</string>
+		<key>storyboardID</key>
+		<string>CollectionEx</string>
+		<key>viewControllerName</key>
+		<string>CollectionExVC</string>
+		<key>Image</key>
+		<string>num_15</string>
+	</dict>
+	<dict>
+		<key>TitleKey</key>
+		<string>To Do List</string>
+		<key>storyboardID</key>
+		<string>ToDoList</string>
+		<key>viewControllerName</key>
+		<string>ToDoListVC</string>
+		<key>Image</key>
+		<string>num_16</string>
 	</dict>
 	<dict>
 		<key>TitleKey</key>
@@ -84,97 +184,7 @@
 	</dict>
 	<dict>
 		<key>TitleKey</key>
-		<string>Dashboard</string>
-		<key>storyboardID</key>
-		<string>SideMenu</string>
-		<key>viewControllerName</key>
-		<string>SideMenuVC</string>
-		<key>Image</key>
-		<string>Logo</string>
-	</dict>
-	<dict>
-		<key>TitleKey</key>
-		<string>Dashboard</string>
-		<key>storyboardID</key>
-		<string>SideMenu</string>
-		<key>viewControllerName</key>
-		<string>SideMenuVC</string>
-		<key>Image</key>
-		<string>Logo</string>
-	</dict>
-	<dict>
-		<key>TitleKey</key>
-		<string>Dashboard</string>
-		<key>storyboardID</key>
-		<string>SideMenu</string>
-		<key>viewControllerName</key>
-		<string>SideMenuVC</string>
-		<key>Image</key>
-		<string>Logo</string>
-	</dict>
-	<dict>
-		<key>TitleKey</key>
-		<string>Dashboard</string>
-		<key>storyboardID</key>
-		<string>SideMenu</string>
-		<key>viewControllerName</key>
-		<string>SideMenuVC</string>
-		<key>Image</key>
-		<string>Logo</string>
-	</dict>
-	<dict>
-		<key>TitleKey</key>
-		<string>Dashboard</string>
-		<key>storyboardID</key>
-		<string>SideMenu</string>
-		<key>viewControllerName</key>
-		<string>SideMenuVC</string>
-		<key>Image</key>
-		<string>Logo</string>
-	</dict>
-	<dict>
-		<key>TitleKey</key>
-		<string>Dashboard</string>
-		<key>storyboardID</key>
-		<string>SideMenu</string>
-		<key>viewControllerName</key>
-		<string>SideMenuVC</string>
-		<key>Image</key>
-		<string>Logo</string>
-	</dict>
-	<dict>
-		<key>TitleKey</key>
-		<string>Dashboard</string>
-		<key>storyboardID</key>
-		<string>SideMenu</string>
-		<key>viewControllerName</key>
-		<string>SideMenuVC</string>
-		<key>Image</key>
-		<string>Logo</string>
-	</dict>
-	<dict>
-		<key>TitleKey</key>
-		<string>Dashboard</string>
-		<key>storyboardID</key>
-		<string>SideMenu</string>
-		<key>viewControllerName</key>
-		<string>SideMenuVC</string>
-		<key>Image</key>
-		<string>Logo</string>
-	</dict>
-	<dict>
-		<key>TitleKey</key>
-		<string>Dashboard</string>
-		<key>storyboardID</key>
-		<string>SideMenu</string>
-		<key>viewControllerName</key>
-		<string>SideMenuVC</string>
-		<key>Image</key>
-		<string>Logo</string>
-	</dict>
-	<dict>
-		<key>TitleKey</key>
-		<string>Dashboard</string>
+		<string>last</string>
 		<key>storyboardID</key>
 		<string>SideMenu</string>
 		<key>viewControllerName</key>

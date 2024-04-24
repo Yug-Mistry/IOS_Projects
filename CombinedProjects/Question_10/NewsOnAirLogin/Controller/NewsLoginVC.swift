@@ -84,19 +84,7 @@ class NewsLoginVC: UIViewController, UITextFieldDelegate {
         // Validate email and password on sign in button tap
         hideValidationMessage()
         
-        guard let email = txtEmail.text, !email.isEmpty else {
-            showValidationMessage(message: "Please enter Email Address", color: "")
-            txtEmail.becomeFirstResponder()
-            return
-        }
-        
-        guard let password = txtPassword.text, !password.isEmpty else {
-            showValidationMessage(message: "Please enter password", color: "")
-            txtPassword.becomeFirstResponder()
-            return
-        }
-        
-        if isValidEmailAndPassword(email: email, password: password) {
+        if isValidEmailAndPassword(email: txtEmail.text ?? "", password: txtPassword.text ?? "") {
             // Save email and password if "Remember Me" is selected
             if btnRememberPassword.isSelected {
                 UserDefaults.standard.setValue(txtEmail.text, forKey: "Email")
@@ -106,7 +94,7 @@ class NewsLoginVC: UIViewController, UITextFieldDelegate {
                 UserDefaults.standard.removeObject(forKey: "Password")
             }
             showValidationMessage(message: "Login Successful", color: "green")
-            // Navigate to next view controller
+            // Navigate to next view controller""
             let sb = UIStoryboard(name: "NextStoryboard", bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: "NextVC") as! NextVC
             navigationController?.pushViewController(vc, animated: true)
@@ -165,23 +153,33 @@ class NewsLoginVC: UIViewController, UITextFieldDelegate {
         let passwordRegex = "^.{8,}$"
         let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
         
-        if emailPredicate.evaluate(with: email) {
-            // Email is valid, now check password
-            if passwordPredicate.evaluate(with: password) {
-                // Password is valid
-                return true
-            } else {
-                // Password is invalid, show error message and focus on password field
-                showValidationMessage(message: "Please enter at least 8 characters long password", color: "")
-                txtPassword.becomeFirstResponder()
-                return false
-            }
-        } else {
+        guard let email = txtEmail.text, !email.isEmpty else {
+            showValidationMessage(message: "Please enter Email Address", color: "")
+            txtEmail.becomeFirstResponder()
+            return false
+        }
+        
+        if !emailPredicate.evaluate(with: email) {
             // Email is invalid, show error message and focus on email field
             showValidationMessage(message: "Please enter a valid Email Address", color: "")
             txtEmail.becomeFirstResponder()
             return false
         }
+        
+        guard let password = txtPassword.text, !password.isEmpty else {
+            showValidationMessage(message: "Please enter password", color: "")
+            txtPassword.becomeFirstResponder()
+            return false
+        }
+        
+        if passwordPredicate.evaluate(with: password) {
+            // Password is invalid, show error message and focus on password field
+            showValidationMessage(message: "Please enter at least 8 characters long password", color: "")
+            txtPassword.becomeFirstResponder()
+            return false
+        }
+        
+        return true
     }
 
     
