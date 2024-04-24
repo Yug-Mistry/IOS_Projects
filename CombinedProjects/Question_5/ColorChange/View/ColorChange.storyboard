@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Change ColorVC-->
+        <scene sceneID="s4p-Rt-BPV">
+            <objects>
+                <viewController storyboardIdentifier="ChangeColorVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fcP-C1-tOC" customClass="ChangeColorVC" customModule="CombinedProjects" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XNR-qk-N75">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8e-2m-EMO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1dm-nI-uMs">
+                                        <rect key="frame" x="8" y="8" width="304" height="464"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtI-jZ-6n9">
+                                                <rect key="frame" x="0.0" y="0.0" width="304" height="464"/>
+                                                <connections>
+                                                    <action selector="changeColor:" destination="fcP-C1-tOC" eventType="touchUpInside" id="rdp-yW-tFd"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would you like?" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61S-uX-DE3">
+                                                <rect key="frame" x="20" y="127" width="264" height="81.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="34"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="mXF-mz-yoK">
+                                                <rect key="frame" x="20" y="228.5" width="264" height="53"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgC-FL-Bwu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="117" height="53"/>
+                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                                        <state key="normal" title="Cool">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="changeColor:" destination="fcP-C1-tOC" eventType="touchUpInside" id="NvD-e8-2MT"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmA-6a-T4h">
+                                                        <rect key="frame" x="147" y="0.0" width="117" height="53"/>
+                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                                        <state key="normal" title="Warm">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="changeColor:" destination="fcP-C1-tOC" eventType="touchUpInside" id="Wmz-iq-26O"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxb-8x-dXl">
+                                                <rect key="frame" x="30" y="30" width="44.5" height="22"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="oxb-8x-dXl" secondAttribute="height" multiplier="2:1" id="V7Z-uM-YGV"/>
+                                                </constraints>
+                                                <state key="normal" title="Back">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeToNextView:" destination="fcP-C1-tOC" eventType="touchUpInside" id="yLc-ou-tdr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDN-dO-THf">
+                                                <rect key="frame" x="229.5" y="30" width="44.5" height="22"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="mDN-dO-THf" secondAttribute="height" multiplier="2:1" id="YTD-Rv-Ysu"/>
+                                                </constraints>
+                                                <state key="normal" title="Next">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeToLoginView:" destination="fcP-C1-tOC" eventType="touchUpInside" id="k5e-gb-J2R"/>
+                                                    <action selector="changeToNextView:" destination="fcP-C1-tOC" eventType="touchUpInside" id="JSE-vV-bas"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="oxb-8x-dXl" firstAttribute="width" secondItem="gtI-jZ-6n9" secondAttribute="width" multiplier="0.145631" id="0GI-sa-d3A"/>
+                                            <constraint firstAttribute="trailing" secondItem="mXF-mz-yoK" secondAttribute="trailing" constant="20" id="0eh-mm-end"/>
+                                            <constraint firstAttribute="trailing" secondItem="gtI-jZ-6n9" secondAttribute="trailing" id="13r-HF-hfP"/>
+                                            <constraint firstItem="mDN-dO-THf" firstAttribute="top" secondItem="1dm-nI-uMs" secondAttribute="top" constant="30" id="4ZJ-3w-E8X"/>
+                                            <constraint firstItem="gtI-jZ-6n9" firstAttribute="top" secondItem="1dm-nI-uMs" secondAttribute="top" id="7kD-vi-OPv"/>
+                                            <constraint firstItem="mDN-dO-THf" firstAttribute="width" secondItem="gtI-jZ-6n9" secondAttribute="width" multiplier="0.145631" id="8lI-WH-LLk"/>
+                                            <constraint firstAttribute="bottom" secondItem="gtI-jZ-6n9" secondAttribute="bottom" id="DJF-eu-bvg"/>
+                                            <constraint firstItem="mXF-mz-yoK" firstAttribute="leading" secondItem="1dm-nI-uMs" secondAttribute="leading" constant="20" id="Nkf-gF-LdK"/>
+                                            <constraint firstItem="oxb-8x-dXl" firstAttribute="leading" secondItem="1dm-nI-uMs" secondAttribute="leading" constant="30" id="UrD-Cl-02w"/>
+                                            <constraint firstItem="gtI-jZ-6n9" firstAttribute="leading" secondItem="1dm-nI-uMs" secondAttribute="leading" id="VAD-Hb-cmS"/>
+                                            <constraint firstAttribute="trailing" secondItem="61S-uX-DE3" secondAttribute="trailing" constant="20" id="VI3-gJ-my7"/>
+                                            <constraint firstItem="mXF-mz-yoK" firstAttribute="centerY" secondItem="1dm-nI-uMs" secondAttribute="centerY" multiplier="1.1" id="Wei-f9-YMw"/>
+                                            <constraint firstAttribute="trailing" secondItem="mDN-dO-THf" secondAttribute="trailing" constant="30" id="ZXw-Ra-7tF"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mXF-mz-yoK" secondAttribute="bottom" constant="20" id="c9e-p5-BeW"/>
+                                            <constraint firstItem="61S-uX-DE3" firstAttribute="leading" secondItem="1dm-nI-uMs" secondAttribute="leading" constant="20" id="lkw-YQ-KGL"/>
+                                            <constraint firstItem="mDN-dO-THf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oxb-8x-dXl" secondAttribute="trailing" id="r2a-Xm-49z"/>
+                                            <constraint firstItem="61S-uX-DE3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="oxb-8x-dXl" secondAttribute="bottom" constant="20" id="sIs-Oj-Dtd"/>
+                                            <constraint firstItem="oxb-8x-dXl" firstAttribute="top" secondItem="1dm-nI-uMs" secondAttribute="top" constant="30" id="ti8-Os-o94"/>
+                                            <constraint firstItem="mXF-mz-yoK" firstAttribute="top" secondItem="61S-uX-DE3" secondAttribute="bottom" constant="20" id="v4M-pK-u3i"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="1dm-nI-uMs" secondAttribute="trailing" id="AEN-uW-GQz"/>
+                                    <constraint firstItem="1dm-nI-uMs" firstAttribute="leading" secondItem="I8e-2m-EMO" secondAttribute="leadingMargin" id="CZZ-Hw-sm4"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="1dm-nI-uMs" secondAttribute="bottom" id="dzS-Bg-wOc"/>
+                                    <constraint firstItem="1dm-nI-uMs" firstAttribute="top" secondItem="I8e-2m-EMO" secondAttribute="topMargin" id="q2z-4f-TZ4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kMs-0i-0kI"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="I8e-2m-EMO" firstAttribute="top" secondItem="XNR-qk-N75" secondAttribute="top" id="08V-5T-Sdn"/>
+                            <constraint firstItem="I8e-2m-EMO" firstAttribute="leading" secondItem="XNR-qk-N75" secondAttribute="leading" id="CqQ-Zh-1AN"/>
+                            <constraint firstAttribute="bottom" secondItem="I8e-2m-EMO" secondAttribute="bottom" id="cdV-6N-lyj"/>
+                            <constraint firstAttribute="trailing" secondItem="I8e-2m-EMO" secondAttribute="trailing" id="rUK-jJ-UIO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgView" destination="XNR-qk-N75" id="U57-RU-oEG"/>
+                        <outlet property="btnBack" destination="oxb-8x-dXl" id="6Cg-FL-z7Q"/>
+                        <outlet property="btnBackground" destination="gtI-jZ-6n9" id="Iqq-EZ-AgO"/>
+                        <outlet property="btnCool" destination="tgC-FL-Bwu" id="Brn-KC-iPF"/>
+                        <outlet property="btnNext" destination="mDN-dO-THf" id="VGg-7S-9gx"/>
+                        <outlet property="btnWarm" destination="UmA-6a-T4h" id="pQj-zR-yBQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gyw-P9-feN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1726" y="790"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

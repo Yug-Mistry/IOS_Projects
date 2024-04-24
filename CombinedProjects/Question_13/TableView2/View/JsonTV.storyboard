@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Ln-Qd-ZlK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--JsonVC-->
+        <scene sceneID="nJs-pG-Xdm">
+            <objects>
+                <viewController storyboardIdentifier="JsonVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Ln-Qd-ZlK" customClass="JsonVC" customModule="CombinedProjects" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jab-Tr-thu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m3R-Yq-x3M">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To STTL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XuN-Bt-73n">
+                                        <rect key="frame" x="16" y="0.0" width="191" height="31"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="22"/>
+                                        <color key="textColor" red="0.30298215150000002" green="0.13827729229999999" blue="0.72243946790000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f7V-Uh-SAf">
+                                        <rect key="frame" x="0.0" y="31" width="414" height="757"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIn-44-hX7">
+                                        <rect key="frame" x="0.0" y="788" width="414" height="30"/>
+                                        <state key="normal" title="Back"/>
+                                        <connections>
+                                            <action selector="btnBackAction:" destination="6Ln-Qd-ZlK" eventType="touchUpInside" id="VwT-0S-qnr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="ZIn-44-hX7" firstAttribute="top" secondItem="f7V-Uh-SAf" secondAttribute="bottom" id="9n1-hO-zxx"/>
+                                    <constraint firstItem="XuN-Bt-73n" firstAttribute="top" secondItem="m3R-Yq-x3M" secondAttribute="top" id="Alg-RT-1hB"/>
+                                    <constraint firstItem="f7V-Uh-SAf" firstAttribute="leading" secondItem="m3R-Yq-x3M" secondAttribute="leading" id="FdH-Lh-bRi"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XuN-Bt-73n" secondAttribute="trailing" constant="16" id="Pkd-k5-5yI"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZIn-44-hX7" secondAttribute="trailing" id="Z2u-Tr-Y90"/>
+                                    <constraint firstItem="ZIn-44-hX7" firstAttribute="leading" secondItem="m3R-Yq-x3M" secondAttribute="leading" id="fng-qO-5p7"/>
+                                    <constraint firstItem="XuN-Bt-73n" firstAttribute="leading" secondItem="m3R-Yq-x3M" secondAttribute="leading" constant="16" id="gOO-IL-5ch"/>
+                                    <constraint firstItem="f7V-Uh-SAf" firstAttribute="top" secondItem="XuN-Bt-73n" secondAttribute="bottom" id="qPS-AH-Unw"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZIn-44-hX7" secondAttribute="bottom" id="v9I-b5-Yek"/>
+                                    <constraint firstAttribute="bottom" secondItem="f7V-Uh-SAf" secondAttribute="bottom" constant="30" id="zXz-at-Ull"/>
+                                    <constraint firstAttribute="trailing" secondItem="f7V-Uh-SAf" secondAttribute="trailing" id="zYh-Wv-oMO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nkN-K6-hU5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nkN-K6-hU5" firstAttribute="trailing" secondItem="m3R-Yq-x3M" secondAttribute="trailing" id="44a-hu-xwC"/>
+                            <constraint firstItem="nkN-K6-hU5" firstAttribute="bottom" secondItem="m3R-Yq-x3M" secondAttribute="bottom" id="IJh-c1-RP2"/>
+                            <constraint firstItem="m3R-Yq-x3M" firstAttribute="leading" secondItem="nkN-K6-hU5" secondAttribute="leading" id="NA7-gl-ZFm"/>
+                            <constraint firstItem="m3R-Yq-x3M" firstAttribute="top" secondItem="nkN-K6-hU5" secondAttribute="top" id="gqD-jX-7ON"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnBack" destination="ZIn-44-hX7" id="JAP-WA-Qwb"/>
+                        <outlet property="tblView" destination="f7V-Uh-SAf" id="gg0-sX-JlR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4qY-z8-DiO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="206" y="156"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

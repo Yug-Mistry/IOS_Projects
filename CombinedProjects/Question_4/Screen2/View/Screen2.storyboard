@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Screen2VC-->
+        <scene sceneID="Hix-Fn-Roh">
+            <objects>
+                <viewController storyboardIdentifier="Screen2VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bUB-KA-bgl" customClass="Screen2VC" customModule="CombinedProjects" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bit-62-kde">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UTX-KT-YRv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXm-Xh-O11">
+                                <rect key="frame" x="20" y="419" width="374" height="34"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeToStack:" destination="bUB-KA-bgl" eventType="touchUpInside" id="fFC-Mu-oGV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUP-QS-TtK">
+                                <rect key="frame" x="20" y="463" width="374" height="34"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Register Now">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeToMainView:" destination="bUB-KA-bgl" eventType="touchUpInside" id="KX6-pG-ecs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick Login with Touch ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seT-Oa-lMW">
+                                <rect key="frame" x="108" y="527" width="198" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Touch ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bqe-wV-zqo">
+                                <rect key="frame" x="173.5" y="695" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fingerprint" translatesAutoresizingMaskIntoConstraints="NO" id="k7s-lM-SMv">
+                                <rect key="frame" x="158.5" y="578" width="97" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="k7s-lM-SMv" secondAttribute="height" multiplier="1:1" id="PTj-9K-3Dd"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ILD-66-Cfw"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="seT-Oa-lMW" firstAttribute="centerX" secondItem="Bit-62-kde" secondAttribute="centerX" id="4Pb-zh-pK1"/>
+                            <constraint firstItem="k7s-lM-SMv" firstAttribute="centerX" secondItem="Bit-62-kde" secondAttribute="centerX" id="6QS-lD-zFC"/>
+                            <constraint firstItem="ILD-66-Cfw" firstAttribute="trailing" secondItem="OXm-Xh-O11" secondAttribute="trailing" constant="20" id="Aeb-Cc-CYm"/>
+                            <constraint firstItem="OUP-QS-TtK" firstAttribute="leading" secondItem="ILD-66-Cfw" secondAttribute="leading" constant="20" id="Dr4-C4-fxY"/>
+                            <constraint firstItem="seT-Oa-lMW" firstAttribute="top" secondItem="OUP-QS-TtK" secondAttribute="bottom" constant="30" id="Ozg-UY-OPM"/>
+                            <constraint firstItem="ILD-66-Cfw" firstAttribute="bottom" secondItem="UTX-KT-YRv" secondAttribute="bottom" id="Qg2-MV-a74"/>
+                            <constraint firstItem="UTX-KT-YRv" firstAttribute="leading" secondItem="ILD-66-Cfw" secondAttribute="leading" id="Ry2-dz-FYf"/>
+                            <constraint firstItem="k7s-lM-SMv" firstAttribute="top" secondItem="seT-Oa-lMW" secondAttribute="bottom" constant="30" id="TaB-03-gLM"/>
+                            <constraint firstItem="OXm-Xh-O11" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ILD-66-Cfw" secondAttribute="top" constant="20" id="UsB-hy-3ZW"/>
+                            <constraint firstItem="Bqe-wV-zqo" firstAttribute="top" secondItem="k7s-lM-SMv" secondAttribute="bottom" constant="20" id="XUA-SR-1ay"/>
+                            <constraint firstItem="ILD-66-Cfw" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Bqe-wV-zqo" secondAttribute="bottom" id="ZPm-Oe-idF"/>
+                            <constraint firstItem="ILD-66-Cfw" firstAttribute="trailing" secondItem="OUP-QS-TtK" secondAttribute="trailing" constant="20" id="a6X-T1-a4M"/>
+                            <constraint firstItem="UTX-KT-YRv" firstAttribute="top" secondItem="ILD-66-Cfw" secondAttribute="top" id="bD0-1z-bIA"/>
+                            <constraint firstItem="k7s-lM-SMv" firstAttribute="width" secondItem="UTX-KT-YRv" secondAttribute="width" multiplier="0.233645" id="fcT-ot-qD5"/>
+                            <constraint firstItem="seT-Oa-lMW" firstAttribute="centerY" secondItem="Bit-62-kde" secondAttribute="centerY" multiplier="1.2" id="jZ1-OI-Ykv"/>
+                            <constraint firstItem="Bqe-wV-zqo" firstAttribute="centerX" secondItem="Bit-62-kde" secondAttribute="centerX" id="kRG-XX-PzI"/>
+                            <constraint firstItem="ILD-66-Cfw" firstAttribute="trailing" secondItem="UTX-KT-YRv" secondAttribute="trailing" id="pUJ-Uq-Hrq"/>
+                            <constraint firstItem="OUP-QS-TtK" firstAttribute="top" secondItem="OXm-Xh-O11" secondAttribute="bottom" constant="10" id="wHr-Ed-2cP"/>
+                            <constraint firstItem="OXm-Xh-O11" firstAttribute="leading" secondItem="ILD-66-Cfw" secondAttribute="leading" constant="20" id="wbV-05-z14"/>
+                            <constraint firstItem="OXm-Xh-O11" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ILD-66-Cfw" secondAttribute="top" id="xLf-5W-HFy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnLogin" destination="OXm-Xh-O11" id="lvN-Z5-GNc"/>
+                        <outlet property="btnRegister" destination="OUP-QS-TtK" id="0CT-21-ez2"/>
+                        <outlet property="nextView" destination="Bit-62-kde" id="RRI-ih-07R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nVO-WP-V4m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1748" y="104"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="fingerprint" width="512" height="512"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
