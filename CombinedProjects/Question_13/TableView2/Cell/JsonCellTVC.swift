@@ -32,7 +32,7 @@ class JsonCellTVC: UITableViewCell {
         lblLName.text = data.lname
         imgVW.fetchImage(from: data.imgAvatar)
         
-        imgVW.layer.cornerRadius = imgVW.frame.height/2.2
+        imgVW.layer.cornerRadius = imgVW.frame.width/2
         imgVW.layer.borderWidth = 1
         imgVW.layer.masksToBounds = true
         imgVW.layer.borderColor = UIColor.blue.cgColor

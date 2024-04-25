@@ -96,6 +96,7 @@
                                     <constraint firstAttribute="trailing" secondItem="l4D-tb-fQ9" secondAttribute="trailing" id="5xb-Fo-5BH"/>
                                     <constraint firstItem="l4D-tb-fQ9" firstAttribute="leading" secondItem="Jwy-5x-v1p" secondAttribute="leading" id="TH0-sS-wyN"/>
                                     <constraint firstItem="l4D-tb-fQ9" firstAttribute="top" secondItem="Jwy-5x-v1p" secondAttribute="top" id="gOr-CG-hvV"/>
+                                    <constraint firstItem="l4D-tb-fQ9" firstAttribute="width" secondItem="Jwy-5x-v1p" secondAttribute="width" id="gq8-xb-zZJ"/>
                                     <constraint firstAttribute="width" secondItem="Jwy-5x-v1p" secondAttribute="height" id="m1c-H0-3jz"/>
                                     <constraint firstAttribute="bottom" secondItem="l4D-tb-fQ9" secondAttribute="bottom" id="xKk-v5-TJ1"/>
                                 </constraints>

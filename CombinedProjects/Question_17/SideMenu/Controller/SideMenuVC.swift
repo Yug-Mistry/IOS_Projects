@@ -26,12 +26,12 @@ class SideMenuVC: UIViewController {
         
         if UserDefaults.standard.bool(forKey: "RememberMe"){
             btnToggleSignIn.setTitle("Logout", for: .normal)
-            btnBottom.setTitle("Logout", for: .normal)
+            btnBottom.setTitle("  Logout", for: .normal)
             btnBottom.setImage(UIImage(named: "log_out"), for: .normal)
         }
         else{
             btnToggleSignIn.setTitle("Login", for: .normal)
-            btnBottom.setTitle("Login", for: .normal)
+            btnBottom.setTitle("  Login", for: .normal)
             btnBottom.setImage(UIImage(named: "log_in"), for: .normal)
         }
         

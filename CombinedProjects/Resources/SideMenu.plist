@@ -94,16 +94,6 @@
 	</dict>
 	<dict>
 		<key>TitleKey</key>
-		<string>Silvertouch Login</string>
-		<key>storyboardID</key>
-		<string>Login</string>
-		<key>viewControllerName</key>
-		<string>LoginVC</string>
-		<key>Image</key>
-		<string>num_9</string>
-	</dict>
-	<dict>
-		<key>TitleKey</key>
 		<string>News Login</string>
 		<key>storyboardID</key>
 		<string>NewsLogin</string>
@@ -171,26 +161,6 @@
 		<string>ToDoListVC</string>
 		<key>Image</key>
 		<string>num_16</string>
-	</dict>
-	<dict>
-		<key>TitleKey</key>
-		<string>Dashboard</string>
-		<key>storyboardID</key>
-		<string>SideMenu</string>
-		<key>viewControllerName</key>
-		<string>SideMenuVC</string>
-		<key>Image</key>
-		<string>Logo</string>
-	</dict>
-	<dict>
-		<key>TitleKey</key>
-		<string>last</string>
-		<key>storyboardID</key>
-		<string>SideMenu</string>
-		<key>viewControllerName</key>
-		<string>SideMenuVC</string>
-		<key>Image</key>
-		<string>Logo</string>
 	</dict>
 </array>
 </plist>
