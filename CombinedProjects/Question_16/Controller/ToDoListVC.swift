@@ -11,10 +11,14 @@ class ToDoListVC: UIViewController {
     
     @IBOutlet weak var tblVW: UITableView!
     
-    //Variables
+    // MARK: - Variables
+    
+    /// Data source delegate for the table view.
     var toDoDataSourceDelegate: ToDoDataSourceDelegate!
     
-    //Source Data
+    // MARK: - Source Data
+    
+    /// Array containing the source data for the table view.
     var arrSource = [
         ToDoListModel(content: "", isEditing: true)
     ]
@@ -25,7 +29,9 @@ class ToDoListVC: UIViewController {
         setUpTable()
     }
     
-    //SetUp Table Action
+    // MARK: - Set Up Table Action
+    
+    /// Set up the table view.
     func setUpTable(){
         if toDoDataSourceDelegate == nil {
             toDoDataSourceDelegate = .init(arrData: arrSource, delegate: self, tbl: tblVW)
@@ -33,7 +39,11 @@ class ToDoListVC: UIViewController {
     }
 }
 
+// MARK: - TblViewDelegate
+
 extension ToDoListVC: TblViewDelegate{
+    
+    /// Called when a row is selected in the table view.
     func didselect(_ tbl: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }

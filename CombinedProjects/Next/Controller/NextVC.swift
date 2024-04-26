@@ -7,8 +7,10 @@
 
 import UIKit
 
+/// View controller for the next screen in the navigation stack.
 class NextVC: UIViewController {
     
+    /// Button to navigate back to the previous screen.
     @IBOutlet weak var btnBack: UIButton!
     
     override func viewDidLoad() {
@@ -17,18 +19,10 @@ class NextVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    /// Action triggered when the back button is tapped.
+    /// - Parameter sender: The button that triggered the action.
     @IBAction func btnBackAction(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

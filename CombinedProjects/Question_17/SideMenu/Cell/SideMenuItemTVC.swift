@@ -7,11 +7,16 @@
 
 import UIKit
 
+/// Custom table view cell for displaying side menu items.
 class SideMenuItemTVC: UITableViewCell {
 
+    // MARK: - Outlets
+    
     @IBOutlet weak var imgVW: UIImageView!
     @IBOutlet weak var lblItem: UILabel!
     @IBOutlet weak var seperatorVW: UIView!
+    
+    // MARK: - Lifecycle Methods
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +29,10 @@ class SideMenuItemTVC: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    // MARK: - Configuration
+    
+    /// Configures the cell with the provided data.
+    /// - Parameter data: The data model containing information for the cell.
     func configCell(data : SideMenuItemModel){
         lblItem.text = data.TitleKey
         imgVW.image = UIImage(named: data.Image)

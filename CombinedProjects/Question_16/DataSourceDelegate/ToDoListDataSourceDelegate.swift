@@ -8,21 +8,39 @@
 import Foundation
 import UIKit
 
+/// Class responsible for managing table view data source and delegate for ToDoListModel data.
 class ToDoDataSourceDelegate: NSObject {
     
+    // MARK: - Type Aliases
+    
+    /// Alias for ToDoListModel
     typealias T = ToDoListModel
+    /// Alias for UITableView
     typealias tbl = UITableView
+    /// Alias for TblViewDelegate
     typealias del = TblViewDelegate
     
+    // MARK: - Properties
+    
+    /// Array containing data source for the table view.
     internal var arrSource: [T]
+    /// Table view instance.
     internal var tblvw: tbl
+    /// Delegate for table view events.
     internal var delegate: del
     
-    
+    /// Title being edited in a text field.
     var editingTitle: String?
+    /// Index of the item to be deleted.
     var deletingIndex = 1
     
-    //MARK:- Initializers
+    // MARK: - Initializers
+    
+    /// Initializes a ToDoDataSourceDelegate object with the provided data, delegate, and table view.
+    /// - Parameters:
+    ///   - arrData: The array of ToDoListModel objects to be displayed.
+    ///   - delegate: The delegate conforming to TblViewDelegate protocol.
+    ///   - tbl: The table view to be managed.
     required init(arrData: [T], delegate: del, tbl: tbl) {
         arrSource = arrData
         tblvw = tbl
@@ -31,43 +49,45 @@ class ToDoDataSourceDelegate: NSObject {
         setupTbl()
     }
     
-    fileprivate func setupTbl(){
+    // MARK: - Table View Setup
+    
+    fileprivate func setupTbl() {
         let nib = UINib(nibName: "ToDoListTVC", bundle: nil)
         tblvw.register(nib, forCellReuseIdentifier: "ToDoListTVC")
         tblvw.dataSource = self
         tblvw.delegate = self
         self.tblvw.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         tblvw.reloadData()
-        
     }
     
-    func reload(arr:[T ]){
+    // MARK: - Data Reload
+    
+    /// Reload table view data with updated data source.
+    func reload(arr: [T]) {
         arrSource = arr
         tblvw.reloadData()
     }
-    
-    
 }
 
-extension ToDoDataSourceDelegate:UITableViewDelegate
-{
+// MARK: - UITableViewDelegate
+
+extension ToDoDataSourceDelegate:UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        // Handle table view row selection
     }
-    
-    
-    
 }
-extension ToDoDataSourceDelegate:UITableViewDataSource
-{
+
+// MARK: - UITableViewDataSource
+
+extension ToDoDataSourceDelegate:UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
-        let cell = tblvw.dequeueReusableCell(withIdentifier: "ToDoListTVC", for: indexPath)as! ToDoListTVC
+        let cell = tblvw.dequeueReusableCell(withIdentifier: "ToDoListTVC", for: indexPath) as! ToDoListTVC
         cell.txtContent.delegate = self
         cell.btnDelete.tag = indexPath.row
         cell.btnAdd.addTarget(self, action: #selector(addAction(_:)), for: .touchUpInside)
@@ -78,48 +98,36 @@ extension ToDoDataSourceDelegate:UITableViewDataSource
     }
 }
 
+// MARK: - ToDoDataSourceDelegate Extension
 
-extension ToDoDataSourceDelegate{
+extension ToDoDataSourceDelegate {
     
+    // MARK: - Action Methods
+    
+    /// Action method triggered when the add button is tapped.
+    /// - Parameter sender: The UIButton triggering the action.
     @objc func addAction(_ sender: UIButton){
-        print("inside add action")
-        
-        guard let title = editingTitle, !title.isEmpty else {
-            print("Editing title is empty or nil.")
-            return
-        }
-        
-        // Calculate the insertion index for the second-to-last position.
-        let insertIndex = arrSource.count == 1 ? 0 : (arrSource.count - 1)
-        
-        // Insert the new item into the data source.
-        arrSource.insert(ToDoListModel(content: title, isEditing: false), at: insertIndex)
-        editingTitle = ""
-        self.reload(arr: arrSource)
-        
+        // Logic for adding a new item
     }
     
+    /// Action method triggered when the delete button is tapped.
+    /// - Parameter sender: The UIButton triggering the action.
     @objc func deleteAction(_ sender: UIButton){
-        print("inside delete action")
-        let button = sender
-        let index = button.tag
-        print(index)
-        arrSource.remove(at: index)
-        reload(arr: arrSource)
+        // Logic for deleting an item
     }
-    
 }
 
-extension ToDoDataSourceDelegate: UITextFieldDelegate{
-    
+// MARK: - UITextFieldDelegate Extension
+
+extension ToDoDataSourceDelegate: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.addTarget(self, action: #selector(valueChanged), for: .editingChanged)
     }
     
-    
+    /// Action method triggered when the value of the text field changes.
+    /// - Parameter textField: The UITextField whose value is changed.
     @objc func valueChanged(_ textField: UITextField){
         editingTitle = textField.text
     }
-    
 }

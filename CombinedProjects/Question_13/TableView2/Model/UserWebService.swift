@@ -7,17 +7,27 @@
 
 import Foundation
 
+// Class responsible for fetching user data from a web service
 class UserWebService: NSObject {
+    
+    // MARK: - Methods
+    
+    /// Fetches user list from a web service and invokes a completion block with the fetched data
+    /// - Parameter block: A closure to be executed upon completion, providing an array of UserModel objects
     func getUserList(block: @escaping ([UserModel]) -> Void) {
         var responseModel = [UserModel]()
-    
+        
+        // URL string for the web service endpoint
         let urlString = "https://reqres.in/api/users?page=2"
         
+        // Create a URL object from the string
         if let url = URL(string: urlString) {
-            // Create a URLSession object
+            // Perform network request synchronously
             do {
+                // Fetch data from the URL
                 let data = try Data(contentsOf: url, options: .alwaysMapped)
                 
+                // Serialize JSON data
                 let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
                 
                 // Check if the JSON result is a dictionary
@@ -38,8 +48,6 @@ class UserWebService: NSObject {
             } catch {
                 print("Error: Unable to parse JSON")
             }
-
-            
         } else {
             print("Invalid URL")
         }
