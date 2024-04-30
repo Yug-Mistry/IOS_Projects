@@ -29,6 +29,13 @@ class ToDoListVC: UIViewController {
         setUpTable()
     }
     
+    // MARK: - Action
+    
+    ///Pop view prop navigation controller
+    @IBAction func btnBackAction(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     // MARK: - Set Up Table Action
     
     /// Set up the table view.

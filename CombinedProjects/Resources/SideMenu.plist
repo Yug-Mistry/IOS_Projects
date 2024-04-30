@@ -100,7 +100,7 @@
 		<key>viewControllerName</key>
 		<string>NewsLoginVC</string>
 		<key>Image</key>
-		<string>num_10</string>
+		<string>num_9</string>
 	</dict>
 	<dict>
 		<key>TitleKey</key>
@@ -110,7 +110,7 @@
 		<key>viewControllerName</key>
 		<string>CountryVC</string>
 		<key>Image</key>
-		<string>num_11</string>
+		<string>num_10</string>
 	</dict>
 	<dict>
 		<key>TitleKey</key>
@@ -120,7 +120,7 @@
 		<key>viewControllerName</key>
 		<string>TableView2VC</string>
 		<key>Image</key>
-		<string>num_12</string>
+		<string>num_11</string>
 	</dict>
 	<dict>
 		<key>TitleKey</key>
@@ -130,7 +130,7 @@
 		<key>viewControllerName</key>
 		<string>JsonVC</string>
 		<key>Image</key>
-		<string>num_13</string>
+		<string>num_12</string>
 	</dict>
 	<dict>
 		<key>TitleKey</key>
@@ -140,7 +140,7 @@
 		<key>viewControllerName</key>
 		<string>JsonSectionVC</string>
 		<key>Image</key>
-		<string>num_14</string>
+		<string>num_13</string>
 	</dict>
 	<dict>
 		<key>TitleKey</key>
@@ -150,7 +150,7 @@
 		<key>viewControllerName</key>
 		<string>CollectionExVC</string>
 		<key>Image</key>
-		<string>num_15</string>
+		<string>num_14</string>
 	</dict>
 	<dict>
 		<key>TitleKey</key>
@@ -160,7 +160,27 @@
 		<key>viewControllerName</key>
 		<string>ToDoListVC</string>
 		<key>Image</key>
+		<string>num_15</string>
+	</dict>
+	<dict>
+		<key>TitleKey</key>
+		<string>Student Table View</string>
+		<key>storyboardID</key>
+		<string>StudentTableView</string>
+		<key>viewControllerName</key>
+		<string>StudentTableViewVC</string>
+		<key>Image</key>
 		<string>num_16</string>
+	</dict>
+	<dict>
+		<key>TitleKey</key>
+		<string>Student Collection View</string>
+		<key>storyboardID</key>
+		<string>StudentCollectionView</string>
+		<key>viewControllerName</key>
+		<string>StudentCollectionViewVC</string>
+		<key>Image</key>
+		<string>num_17</string>
 	</dict>
 </array>
 </plist>
