@@ -182,5 +182,15 @@
 		<key>Image</key>
 		<string>num_17</string>
 	</dict>
+	<dict>
+		<key>TitleKey</key>
+		<string>News List</string>
+		<key>storyboardID</key>
+		<string>NewsList</string>
+		<key>viewControllerName</key>
+		<string>NewsListVC</string>
+		<key>Image</key>
+		<string>num_17</string>
+	</dict>
 </array>
 </plist>

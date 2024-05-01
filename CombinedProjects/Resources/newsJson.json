@@ -1,0 +1,106 @@
+{
+  "resultflag": 1,
+  "message": "Success message",
+  "articles": [
+    {
+      "id": "1",
+      "title": "Apple Unveils New iPhone 15 Pro with Revolutionary Camera Technology",
+      "category": "Technology",
+      "url": "https://www.apple.com/newsroom/2024/05/apple-unveils-iphone-15-pro/",
+      "urlToImage": "https://i0.wp.com/usceconreview.com/wp-content/uploads/2020/01/appleproductlineup-800x313-1.jpg?fit=800%2C313&ssl=1",
+      "publishedAt": "2024-05-01T08:00:00Z",
+      "content": "Apple has officially announced the launch of the iPhone 15 Pro, featuring revolutionary camera technology that promises to redefine smartphone photography. The new iPhone comes with a state-of-the-art triple-lens camera system, incorporating advanced AI algorithms to capture stunning photos and videos in any lighting condition. Additionally, Apple has introduced ProRAW+ mode, allowing users to capture and edit professional-quality RAW images directly on their iPhone. With its sleek design, powerful performance, and innovative features, the iPhone 15 Pro is set to impress tech enthusiasts worldwide.",
+      "author": "John Doe"
+    },
+    {
+      "id": "2",
+      "title": "Tesla Introduces Next-Generation Cybertruck with Enhanced Off-Road Capability",
+      "category": "Automotive",
+      "url": "https://www.tesla.com/cybertruck",
+      "urlToImage": "https://www.topgear.com/sites/default/files/2023/12/1-Tesla-Cybertruck-review.jpg?w=892&h=502",
+      "publishedAt": "2024-05-02T10:30:00Z",
+      "content": "Tesla has unveiled the latest iteration of its Cybertruck, featuring enhanced off-road capability and futuristic design elements. The next-generation Cybertruck boasts improved suspension, higher ground clearance, and robust all-terrain tires, making it the ultimate adventure vehicle for outdoor enthusiasts. With its exoskeleton architecture and armored glass windows, the Cybertruck offers unmatched durability and protection. Equipped with Tesla's advanced Autopilot system, the Cybertruck ensures a safe and effortless driving experience both on and off the road.",
+      "author": "Jane Smith"
+    },
+    {
+      "id": "3",
+      "title": "NASA Announces Discovery of Habitable Exoplanet Orbiting Proxima Centauri",
+      "category": "Science",
+      "url": "https://www.nasa.gov/press-release/habitable-exoplanet-proxima-centauri/",
+      "urlToImage": "https://media.defense.gov/2005/Aug/23/2000580153/1200/1200/0/050819-F-7614K-002.JPG",
+      "publishedAt": "2024-05-03T12:00:00Z",
+      "content": "NASA scientists have made a groundbreaking discovery with the detection of a potentially habitable exoplanet orbiting Proxima Centauri. The newfound exoplanet, named Proxima Prime, lies within the habitable zone of its host star, where liquid water could exist on its surface. With a rocky composition and moderate temperatures, Proxima Prime offers favorable conditions for supporting life as we know it. NASA's James Webb Space Telescope is slated to conduct further observations of Proxima Prime, shedding light on its atmospheric composition and potential habitability.",
+      "author": "Michael Johnson"
+    },
+    {
+      "id": "4",
+      "title": "Amazon Unveils Ambitious Plan to Combat Climate Change with Renewable Energy Initiatives",
+      "category": "Business",
+      "url": "https://www.aboutamazon.com/news/sustainability/amazons-ambitious-climate-pledge/",
+      "urlToImage": "https://static-assets.business.amazon.com/assets/global/images/story/2747-WhatIsAB-LinkedStory-2216x960_v2.jpg.transform/2048x888/image.jpg",
+      "publishedAt": "2024-05-04T15:45:00Z",
+      "content": "Amazon has announced an ambitious plan to combat climate change through a series of renewable energy initiatives and sustainability measures. The company aims to reach net-zero carbon emissions by 2040 and transition to 100% renewable energy by 2030. Amazon plans to invest in solar and wind energy projects, implement energy-efficient technologies, and optimize its transportation and logistics operations to reduce carbon footprint. Additionally, Amazon pledges to preserve and protect forests, biodiversity, and natural habitats to mitigate the effects of climate change.",
+      "author": "Emily Brown"
+    },
+    {
+      "id": "5",
+      "title": "SpaceX Successfully Launches Crewed Mission to International Space Station",
+      "category": "Space",
+      "url": "https://www.spacex.com/updates/crew-5-mission/",
+      "urlToImage": "https://i0.wp.com/studentwork.prattsi.org/infovis/wp-content/uploads/sites/3/2021/02/spacex-tesmanian_1600x.jpg?resize=1024%2C576&ssl=1",
+      "publishedAt": "2024-05-05T18:20:00Z",
+      "content": "SpaceX has achieved another milestone in space exploration with the successful launch of its Crew-5 mission to the International Space Station. The Crew Dragon spacecraft, named Endeavour, carried a team of four astronauts to the orbiting laboratory, where they will conduct scientific research and technology demonstrations. This mission marks SpaceX's fifth crewed flight to the ISS under NASA's Commercial Crew Program, highlighting the company's capability to provide reliable and cost-effective access to space.",
+      "author": "David Wilson"
+    },
+    {
+      "id": "6",
+      "title": "Google Unveils Latest Pixel 7 Smartphone with Enhanced AI Capabilities",
+      "category": "Technology",
+      "url": "https://store.google.com/us/product/pixel_7",
+      "urlToImage": "https://etc.cuit.columbia.edu/sites/default/files/styles/cu_crop/public/content/other_google_ai.jpeg?itok=32JTlMBB",
+      "publishedAt": "2024-05-06T11:10:00Z",
+      "content": "Google has introduced the Pixel 7, its latest flagship smartphone featuring enhanced AI capabilities and cutting-edge technology. The Pixel 7 is powered by Google's most advanced AI chip, enabling seamless integration of machine learning algorithms for photography, voice recognition, and smart assistant features. With its state-of-the-art camera system and computational photography techniques, the Pixel 7 delivers stunning photos and videos in any lighting condition. Additionally, the Pixel 7 offers faster performance, longer battery life, and a host of innovative features designed to enhance the user experience.",
+      "author": "Sophia Clark"
+    },
+    {
+      "id": "7",
+      "title": "Microsoft Unveils Next-Generation Surface Laptop with Foldable Display",
+      "category": "Technology",
+      "url": "https://www.microsoft.com/en-us/surface/devices/surface-laptop",
+      "urlToImage": "https://news.microsoft.com/wp-content/uploads/2017/02/Horace-Chow.jpg",
+      "publishedAt": "2024-05-07T14:00:00Z",
+      "content": "Microsoft has revealed the next-generation Surface Laptop, featuring a revolutionary foldable display and versatile form factor. The new Surface Laptop combines the portability of a traditional laptop with the flexibility of a foldable device, allowing users to seamlessly switch between laptop and tablet modes. Equipped with Microsoft's innovative Surface Pen technology, the Surface Laptop offers precision and responsiveness for creative tasks and note-taking. With its sleek design, powerful performance, and immersive display, the Surface Laptop sets a new standard for modern computing.",
+      "author": "Liam Johnson"
+    },
+    {
+      "id": "8",
+      "title": "Netflix Announces Major Expansion with Launch of Gaming Platform",
+      "category": "Entertainment",
+      "url": "https://www.netflix.com/",
+      "urlToImage": "https://images.unsplash.com/photo-1633793675529-58eecb6ea16f?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "publishedAt": "2024-05-08T16:30:00Z",
+      "content": "Netflix has made a bold move into the gaming industry with the announcement of its new gaming platform, offering a diverse collection of interactive experiences for subscribers. The Netflix Gaming platform will feature a mix of original titles, licensed games, and exclusive collaborations with renowned developers. Subscribers will have access to a wide range of genres, including action, adventure, puzzle, and simulation games, all seamlessly integrated into the Netflix app. With its vast library of content and innovative approach to entertainment, Netflix aims to revolutionize the gaming landscape.",
+      "author": "Olivia Garcia"
+    },
+    {
+      "id": "9",
+      "title": "Facebook Introduces Metaverse Marketplace for Virtual Goods and Experiences",
+      "category": "Technology",
+      "url": "https://about.facebook.com/news/2024/05/facebook-metaverse-marketplace/",
+      "urlToImage": "https://www.aclu.org/wp-content/uploads/2019/09/web18-facebook-1160x768-800x533.jpg",
+      "publishedAt": "2024-05-09T09:45:00Z",
+      "content": "Facebook has launched the Metaverse Marketplace, a virtual platform where users can buy, sell, and trade digital goods and experiences. The marketplace offers a wide range of virtual assets, including virtual real estate, digital collectibles, avatar customization options, and immersive experiences. Users can explore various virtual worlds, interact with other users, and participate in virtual events and activities. With the Metaverse Marketplace, Facebook aims to create a thriving virtual economy and foster creativity and innovation in the metaverse.",
+      "author": "William Brown"
+    },
+    {
+      "id": "10",
+      "title": "Tesla Introduces Latest Model X Electric SUV with Advanced Autopilot Features",
+      "category": "Automotive",
+      "url": "https://www.tesla.com/modelx",
+      "urlToImage": "data:image/jpeg;base64,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",
+      "publishedAt": "2024-05-10T18:00:00Z",
+      "content": "Tesla introduces its latest electric SUV, the Model X, featuring advanced autopilot capabilities and state-of-the-art technology. The Model X comes equipped with Tesla's Autopilot 5.0 system, offering enhanced semi-autonomous driving capabilities and advanced safety features. With its sleek design, spacious interior, and impressive performance, the Model X delivers a premium driving experience for Tesla enthusiasts. Additionally, the Model X offers ample cargo space, towing capacity, and long-range battery options, making it the ideal choice for eco-conscious drivers and adventure seekers.",
+      "author": "Emma Wilson"
+    }
+  ]
+}
