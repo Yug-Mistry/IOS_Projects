@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// UIViewController subclass for displaying a collection view of students
 class StudentCollectionViewVC: UIViewController {
 
     // MARK: - Outlets
@@ -15,16 +16,16 @@ class StudentCollectionViewVC: UIViewController {
     
     // MARK: - Properties
     
-    /// Instance of StudentWebService to fetch user data from a web service.
+    /// Instance of StudentWebService to fetch student data from a web service
     var webService = StudentWebService()
     
-    /// Instance of StudentCollectionDataSourceDelegate to manage collection view data source and delegate.
+    /// Instance of StudentCollectionDataSourceDelegate to manage collection view data source and delegate
     var studentCollectionDataSourceDelegate: StudentCollectionDataSourceDelegate!
     
-    /// Array to store sudent data fetched from the web service.
+    /// Array to store student data fetched from the web service
     var arrData: [StudentModel] = []
     
-    // MARK: - Lifecycle Methods
+    // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,25 +34,25 @@ class StudentCollectionViewVC: UIViewController {
     
     // MARK: - Button Action
     
-    /// Action triggered when the back button is tapped.
+    /// Action method triggered when the back button is tapped
     @IBAction func btnBackAction(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
     
     // MARK: - Data Fetching
     
-    /// Method to fetch student data from the web service.
+    /// Fetches student data from the web service
     func getData() {
         webService.getStudentList { arr in
             self.arrData = arr
+            self.setupCollectionView()
         }
-        setupTblView()
     }
     
-    // MARK: - Table View Setup
+    // MARK: - Collection View Setup
     
-    /// Method to setup collection view with necessary configurations.
-    func setupTblView() {
+    /// Sets up the collection view with necessary configurations
+    func setupCollectionView() {
         if studentCollectionDataSourceDelegate == nil {
             studentCollectionDataSourceDelegate = .init(arrData: arrData, delegate: self, col: collectionVW, vc: self)
         } else {
@@ -61,17 +62,15 @@ class StudentCollectionViewVC: UIViewController {
 
 }
 
-// MARK: - StudentCollectionDataSourceDelegate
+// MARK: - StudentCollectionViewDelegate
 
 extension StudentCollectionViewVC: StudentCollectionViewDelegate {
     
-    /// Method called when an item is selected in the collection view.
+    /// Called when an item is selected in the collection view
     func didSelect(colView: UICollectionView, indexPath: IndexPath) {
-        // Code to handle item selection
         let storyboard = UIStoryboard(name: "StudentDetails", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "StudentDetailsVC") as! StudentDetailsVC
         viewController.selectedStudent = arrData[indexPath.row]
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
-

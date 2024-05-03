@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-// Class responsible for managing table view data source and delegate for NewsModel data
+/// Class responsible for managing table view data source and delegate for NewsModel data
 class NewsDataSourceDelegate: NSObject {
     
     // MARK: - Type Aliases
@@ -28,6 +28,7 @@ class NewsDataSourceDelegate: NSObject {
     internal var tblvw: tbl
     /// Delegate for table view events
     internal var delegate: del
+    /// View controller where the table view resides
     internal var viewController: UIViewController
     
     // MARK: - Initializers
@@ -37,7 +38,8 @@ class NewsDataSourceDelegate: NSObject {
     ///   - arrData: Data source for the table view
     ///   - delegate: Delegate for table view events
     ///   - tbl: Table view instance
-    required init(arrData: [T], delegate: del, tbl: tbl,viewController: UIViewController) {
+    ///   - viewController: View controller where the table view resides
+    required init(arrData: [T], delegate: del, tbl: tbl, viewController: UIViewController) {
         arrSource = arrData
         tblvw = tbl
         self.delegate = delegate
@@ -72,7 +74,7 @@ class NewsDataSourceDelegate: NSObject {
 
 extension NewsDataSourceDelegate: UITableViewDelegate {
     
-    // Method called when a row is selected in the table view
+    /// Method called when a row is selected in the table view
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate.didselect(tblvw, didSelectRowAt: indexPath)
     }
@@ -82,12 +84,12 @@ extension NewsDataSourceDelegate: UITableViewDelegate {
 
 extension NewsDataSourceDelegate: UITableViewDataSource {
     
-    // Number of rows in the table view
+    /// Number of rows in the table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrSource.count
     }
     
-    // Configures and returns a table view cell for the specified row
+    /// Configures and returns a table view cell for the specified row
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tblvw.dequeueReusableCell(withIdentifier: "NewsTVC", for: indexPath) as! NewsTVC
         cell.configCell(data: arrSource[indexPath.row])
@@ -97,11 +99,13 @@ extension NewsDataSourceDelegate: UITableViewDataSource {
         return cell
     }
     
+    /// Handles bookmark button action
     @objc func addAction(_ sender: UIButton){
         sender.isSelected.toggle()
         arrSource[sender.tag].isBookmarked.toggle()
     }
     
+    /// Handles share button action
     @objc func shareAction(_ sender: UIButton){
         let indexPath = IndexPath(row: sender.tag, section: 0)
         let selectedNews = arrSource[indexPath.row]

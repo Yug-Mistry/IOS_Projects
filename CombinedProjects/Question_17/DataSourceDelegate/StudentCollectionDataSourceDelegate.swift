@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 /// Protocol defining methods for handling collection view selection events.
-protocol StudentCollectionViewDelegate {
+protocol StudentCollectionViewDelegate: AnyObject {
     
     /// Called when an item in the collection view is selected.
     /// - Parameters:
@@ -21,50 +21,52 @@ protocol StudentCollectionViewDelegate {
 /// Class responsible for managing collection view data source and delegate.
 class StudentCollectionDataSourceDelegate: NSObject {
     
-    //MARK: - Alias
+    // MARK: - Type Aliases
     
     typealias T = StudentModel
-    typealias col = UICollectionView
-    typealias del = StudentCollectionViewDelegate
-    typealias vc = UIViewController
+    typealias Col = UICollectionView
+    typealias Del = StudentCollectionViewDelegate
+    typealias VC = UIViewController
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     /// Array containing data source for the collection view.
-    internal var arrSource: [T]
+    private var arrSource: [T]
     /// Collection view instance.
-    internal var colvw: col
+    private var colvw: Col
     /// Delegate for collection view events.
-    internal var delegate: del
+    private var delegate: Del
     /// Weak reference to the view controller.
-    internal weak var vc:vc?
+    private weak var vc: VC?
     
     /// Number of items to be displayed in one row of the collection view.
-    let kNumberOfItemsInOneRow: CGFloat = 2
+    private let kNumberOfItemsInOneRow: CGFloat = 2
     /// Edge inset for the collection view.
-    let kEdgeInset:CGFloat = 8
+    private let kEdgeInset: CGFloat = 8
     /// Minimum inter-item and line spacing for the collection view.
-    let minimumInterItemandLinespacing:CGFloat = 0
+    private let minimumInterItemandLinespacing: CGFloat = 0
     
     // MARK: - Initializers
     
-    /// Initializes a CollectionExDataSourceDelegate object with the provided data, delegate, collection view, and view controller.
+    /// Initializes a CollectionDataSourceDelegate object with the provided data, delegate, collection view, and view controller.
     /// - Parameters:
-    ///   - arrData: The array of UserModel objects to be displayed.
-    ///   - delegate: The delegate conforming to CollectionExViewDelegate protocol.
+    ///   - arrData: The array of StudentModel objects to be displayed.
+    ///   - delegate: The delegate conforming to StudentCollectionViewDelegate protocol.
     ///   - col: The collection view to be managed.
     ///   - vc: The view controller owning the collection view.
-    required init(arrData: [T], delegate: StudentCollectionViewDelegate, col: UICollectionView,vc:vc) {
-        arrSource = arrData
-        colvw = col
+    required init(arrData: [T], delegate: Del, col: Col, vc: VC) {
+        self.arrSource = arrData
+        self.colvw = col
         self.delegate = delegate
         self.vc = vc
         super.init()
         setupCol()
     }
     
-    fileprivate func setupCol(){
-        
+    // MARK: - Setup
+    
+    /// Sets up the collection view with necessary configurations.
+    fileprivate func setupCol() {
         let nib = UINib(nibName: "StudentCVC", bundle: nil)
         colvw.register(nib, forCellWithReuseIdentifier: "StudentCVC")
         colvw.dataSource = self
@@ -72,8 +74,10 @@ class StudentCollectionDataSourceDelegate: NSObject {
         colvw.reloadData()
     }
     
-    /// Method to reload collection view with updated data.
-    func reload(arr:[T]){
+    // MARK: - Data Reloading
+    
+    /// Reloads the collection view with updated data.
+    func reload(arr: [T]) {
         arrSource = arr
         colvw.reloadData()
     }
@@ -81,17 +85,16 @@ class StudentCollectionDataSourceDelegate: NSObject {
 
 // MARK: - UICollectionViewDelegate
 
-extension StudentCollectionDataSourceDelegate:UICollectionViewDelegate{
+extension StudentCollectionDataSourceDelegate: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         delegate.didSelect(colView: colvw, indexPath: indexPath)
     }
-    
 }
 
 // MARK: - UICollectionViewDataSource
 
-extension StudentCollectionDataSourceDelegate:UICollectionViewDataSource {
+extension StudentCollectionDataSourceDelegate: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrSource.count
@@ -127,4 +130,3 @@ extension StudentCollectionDataSourceDelegate: UICollectionViewDelegateFlowLayou
         return .init(top: kEdgeInset, left: kEdgeInset, bottom: kEdgeInset, right: kEdgeInset)
     }
 }
-
